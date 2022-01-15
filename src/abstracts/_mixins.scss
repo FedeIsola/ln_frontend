@@ -1,0 +1,19 @@
+@use "./variables.scss" as variables;
+
+@mixin for-phone {
+  @media (max-width: variables.$small-screen) {
+    @content;
+  }
+}
+
+@mixin for-tablet {
+  @media (min-width: variables.$medium-screen) {
+    @content;
+  }
+}
+
+@mixin for-desktop {
+  @media (min-width: variables.$large-screen) {
+    @content;
+  }
+}
