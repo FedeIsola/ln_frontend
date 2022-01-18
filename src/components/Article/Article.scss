@@ -1,0 +1,103 @@
+@use "../../abstracts/variables" as variables;
+@use "../../abstracts/mixins" as mixins;
+
+@font-face {
+  font-family: "Sueca Slab";
+  src: url("../../../public/suecaslab-bold-webfont.woff2");
+}
+
+@font-face {
+  font-family: "Sueca Slab";
+  src: url("../../../public/suecaslab-medium-webfont.woff2");
+}
+
+// article padding
+$article-padding: 22px;
+
+$title-font-size: 20px;
+$title-line-height: 28px;
+
+$body-font-size: 16px;
+$body-line-height: 24px;
+
+$gap-between-elements: 8px;
+
+$color-scoped-background-color: #c61c1e;
+$color-scoped-font-color: white;
+
+$author-scoped-border-color: #cccccc;
+
+$max-image-heigth: 192px;
+$max-article-width: 320px;
+
+.news-article {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-between-elements;
+  max-width: $max-article-width;
+  .image {
+    width: 100%;
+    max-height: $max-image-heigth;
+  }
+  .title {
+    font-weight: normal;
+    font-family: "Sueca Slab";
+    padding: 0 $article-padding;
+    font-size: $title-font-size;
+    line-height: $title-line-height;
+  }
+  .lead {
+    color: variables.$highlight-color;
+  }
+  .tail {
+    padding: 0 $article-padding;
+    font-size: $body-font-size;
+    line-height: $body-line-height;
+  }
+  .marquee,
+  .author-name,
+  .marquee-author {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .title,
+  .tail {
+    padding: 0 $article-padding;
+  }
+  .marquee,
+  .marquee-author {
+    padding-left: $article-padding;
+  }
+
+  @include mixins.for-tablet {
+    .title {
+      font-weight: bold;
+    }
+  }
+
+  $author-scoped-margin: 16px;
+
+  &.author-scoped {
+    align-items: center;
+    justify-content: center;
+    max-width: $max-article-width - $author-scoped-margin;
+    margin: 0 $author-scoped-margin;
+    padding: 18px 12px;
+    border: 1px solid $author-scoped-border-color;
+    text-align: center;
+    .author-image {
+      border-radius: 50%;
+      max-width: 80px;
+    }
+  }
+
+  &.color-scoped {
+    padding-bottom: 18px;
+    background-color: $color-scoped-background-color;
+    color: $color-scoped-font-color;
+    .lead {
+      color: $color-scoped-font-color;
+    }
+  }
+}
