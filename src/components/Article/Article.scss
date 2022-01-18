@@ -11,24 +11,27 @@
   src: url("../../../public/suecaslab-medium-webfont.woff2");
 }
 
-// article padding
+// ARTICLE VARIABLES
 $article-padding: 22px;
+$gap-between-elements: 8px;
+$max-image-heigth: 192px;
+$max-article-width: 320px;
 
+// TITLE
 $title-font-size: 20px;
 $title-line-height: 28px;
 
+// BODY (tail)
 $body-font-size: 16px;
 $body-line-height: 24px;
 
-$gap-between-elements: 8px;
+// AUTHOR SCOPED ARTICLE
+$author-scoped-border-color: #cccccc;
+$author-scoped-margin: 16px;
 
+// COLOR SCOPED ARTICLE
 $color-scoped-background-color: #c61c1e;
 $color-scoped-font-color: white;
-
-$author-scoped-border-color: #cccccc;
-
-$max-image-heigth: 192px;
-$max-article-width: 320px;
 
 .news-article {
   display: flex;
@@ -76,12 +79,10 @@ $max-article-width: 320px;
     }
   }
 
-  $author-scoped-margin: 16px;
-
   &.author-scoped {
     align-items: center;
     justify-content: center;
-    max-width: $max-article-width - $author-scoped-margin;
+    max-width: $max-article-width - 2 * $author-scoped-margin;
     margin: 0 $author-scoped-margin;
     padding: 18px 12px;
     border: 1px solid $author-scoped-border-color;
