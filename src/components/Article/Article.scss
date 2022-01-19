@@ -11,94 +11,115 @@
   src: url("../../../public/suecaslab-medium-webfont.woff2");
 }
 
-// ARTICLE VARIABLES
-$article-padding: 22px;
-$gap-between-elements: 8px;
-$max-image-heigth: 192px;
-$max-article-width: 320px;
-
-// TITLE
-$title-font-size: 20px;
-$title-line-height: 28px;
-
-// BODY (tail)
-$body-font-size: 16px;
-$body-line-height: 24px;
-
-// AUTHOR SCOPED ARTICLE
-$author-scoped-border-color: #cccccc;
-$author-scoped-margin: 16px;
-
-// COLOR SCOPED ARTICLE
-$color-scoped-background-color: #c61c1e;
-$color-scoped-font-color: white;
-
 .news-article {
+  $max-article-width: 320px;
+  $max-article-width-tablet: 234px;
+  $gap-between-elements: 8px;
+  $article-padding: 22px;
+  $max-image-heigth: 192px;
+
   display: flex;
   flex-direction: column;
   gap: $gap-between-elements;
   max-width: $max-article-width;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
   .image {
     width: 100%;
     max-height: $max-image-heigth;
   }
   .title {
+    $font-size: 20px;
+    $line-height: 28px;
+
     font-weight: normal;
     font-family: "Sueca Slab";
     padding: 0 $article-padding;
-    font-size: $title-font-size;
-    line-height: $title-line-height;
+    font-size: $font-size;
+    line-height: $line-height;
   }
   .lead {
     color: variables.$highlight-color;
   }
   .tail {
+    $font-size: 16px;
+    $line-height: 24px;
+
     padding: 0 $article-padding;
-    font-size: $body-font-size;
-    line-height: $body-line-height;
+    font-size: $font-size;
+    line-height: $line-height;
   }
-  .marquee,
-  .author-name,
-  .marquee-author {
+  .marquee-with-author {
+    $font-size: 14px;
+    $line-height: 16px;
+
     font-weight: bold;
-    font-size: 14px;
-    line-height: 16px;
-  }
-  .title,
-  .tail {
-    padding: 0 $article-padding;
-  }
-  .marquee,
-  .marquee-author {
+    font-size: $font-size;
+    line-height: $line-height;
     padding-left: $article-padding;
   }
 
   @include mixins.for-tablet {
+    max-width: $max-article-width-tablet;
+    .title,
+    .tail,
+    .marquee-with-author {
+      padding: 0;
+    }
     .title {
-      font-weight: bold;
+      $font-size-tablet: 18px;
+      $line-height-tablet: 26px;
+
+      font-size: $font-size-tablet;
+      line-height: $line-height-tablet;
+    }
+    .image {
+      max-height: 134px;
     }
   }
 
   &.author-scoped {
+    $border-color: #cccccc;
+    $margin: 16px;
+    $vertical-padding: 18px;
+    $horizontal-padding: 12px;
+
     align-items: center;
     justify-content: center;
-    max-width: $max-article-width - 2 * $author-scoped-margin;
-    margin: 0 $author-scoped-margin;
-    padding: 18px 12px;
-    border: 1px solid $author-scoped-border-color;
+    max-width: $max-article-width - 2 * $margin;
+    margin: 0 $margin;
+    padding: $vertical-padding $horizontal-padding;
+    border: 1px solid $border-color;
     text-align: center;
     .author-image {
       border-radius: 50%;
       max-width: 80px;
     }
+    .marquee-with-author {
+      padding-left: 0;
+    }
+    @include mixins.for-tablet {
+      max-width: $max-article-width-tablet;
+      margin: 0;
+    }
   }
 
   &.color-scoped {
-    padding-bottom: 18px;
-    background-color: $color-scoped-background-color;
-    color: $color-scoped-font-color;
+    $background-color: #c61c1e;
+    $font-color: white;
+    $padding: 16px;
+
+    background-color: $background-color;
+    color: $font-color;
     .lead {
-      color: $color-scoped-font-color;
+      color: $font-color;
+    }
+    .title,
+    .tail,
+    .marquee-with-author {
+      padding: 0 $padding;
     }
   }
 }
