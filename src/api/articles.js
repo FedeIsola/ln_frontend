@@ -1,9 +1,10 @@
 export const articles = [
   {
     title: "Novedades",
-    type: "focal-izquierdo",
+    clickable: true,
+    type: "notas-3",
     url: "https://www.lanacion.com.ar/novedades",
-    collection: [
+    articles: [
       {
         lead: "Meter la pata",
         title: "Tras verse con Alberto Fernandez, Axel Kicillof volvió a criticar al FMI",
@@ -33,7 +34,7 @@ export const articles = [
   },
   {
     type: "notas-3",
-    collection: [
+    articles: [
       {
         lead: "Coronavirus",
         title: "Cuáles son las condiciones que pide España para el ingreso de los argentinos al país",
@@ -61,7 +62,7 @@ export const articles = [
   },
   {
     type: "notas-3",
-    collection: [
+    articles: [
       {
         title: "Facturas baratitas, pero todos al spiedo",
         authorName: "Pablo Sirvén",
@@ -90,7 +91,7 @@ export const articles = [
   },
   {
     type: "notas-3",
-    collection: [
+    articles: [
       {
         lead: "Ni la costa ni el Sur",
         title: "El otro destino nacional que, pese a la ola de contagios, vive un boom turístico",
@@ -118,7 +119,7 @@ export const articles = [
   },
   {
     type: "notas-3",
-    collection: [
+    articles: [
       {
         title: "Bien común e interés publico, fines del Estado",
         authorName: "Juan Carlos Cassagne",
