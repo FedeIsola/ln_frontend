@@ -6,7 +6,7 @@ const App = () => {
   return (
     <main className="main-content">
       {articles.map((item, index) => {
-        return <Container key={index} title={item.title} articles={item.collection} type={item.type} />;
+        return <Container key={index} title={item.title} articles={item.articles} type={item.type} />;
       })}
     </main>
   );
