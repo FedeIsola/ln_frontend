@@ -28,6 +28,8 @@ a {
 .main-content {
   $gap-between-sections: 32px;
 
+  padding: $gap-between-sections 0;
+
   display: flex;
   flex-direction: column;
   align-items: center;

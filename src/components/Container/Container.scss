@@ -2,20 +2,22 @@
 
 .container {
   $gap-between-articles: 32px;
+  $max-width: 920px;
 
-  max-width: 960px;
   display: flex;
   flex-direction: column;
   gap: $gap-between-articles;
   margin: auto;
-  &.notas-3 {
-    @include mixins.for-tablet {
-      gap: 16px;
+  max-width: $max-width;
+}
+
+@include mixins.for-tablet {
+  .container {
+    &.notas-3 {
       flex-direction: row;
+      gap: 16px;
     }
-  }
-  &.focal-izquierdo {
-    @include mixins.for-tablet {
+    &.focal-izquierdo {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
     }

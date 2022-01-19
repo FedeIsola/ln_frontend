@@ -13,10 +13,8 @@
 
 .news-article {
   $max-article-width: 320px;
-  $max-article-width-tablet: 234px;
   $gap-between-elements: 8px;
   $article-padding: 22px;
-  $max-image-heigth: 192px;
 
   display: flex;
   flex-direction: column;
@@ -27,15 +25,17 @@
     color: inherit;
   }
   .image {
+    $max-heigth: 192px;
     width: 100%;
-    max-height: $max-image-heigth;
+    max-height: $max-heigth;
   }
   .title {
-    $font-size: 20px;
-    $line-height: 28px;
+    $font-size: 18px;
+    $line-height: 26px;
+    $font: "Sueca Slab";
 
     font-weight: normal;
-    font-family: "Sueca Slab";
+    font-family: $font;
     padding: 0 $article-padding;
     font-size: $font-size;
     line-height: $line-height;
@@ -61,48 +61,34 @@
     padding-left: $article-padding;
   }
 
-  @include mixins.for-tablet {
-    max-width: $max-article-width-tablet;
-    .title,
-    .tail,
-    .marquee-with-author {
-      padding: 0;
-    }
-    .title {
-      $font-size-tablet: 18px;
-      $line-height-tablet: 26px;
-
-      font-size: $font-size-tablet;
-      line-height: $line-height-tablet;
-    }
-    .image {
-      max-height: 134px;
-    }
-  }
-
   &.author-scoped {
     $border-color: #cccccc;
     $margin: 16px;
     $vertical-padding: 18px;
     $horizontal-padding: 12px;
+    $max-width: $max-article-width - 2 * $margin;
 
     align-items: center;
     justify-content: center;
-    max-width: $max-article-width - 2 * $margin;
+    max-width: $max-width;
     margin: 0 $margin;
     padding: $vertical-padding $horizontal-padding;
     border: 1px solid $border-color;
     text-align: center;
+
+    .title {
+      $font-size: 18px;
+      $line-height: 28px;
+
+      font-size: $font-size;
+      line-height: $line-height;
+    }
     .author-image {
       border-radius: 50%;
       max-width: 80px;
     }
     .marquee-with-author {
       padding-left: 0;
-    }
-    @include mixins.for-tablet {
-      max-width: $max-article-width-tablet;
-      margin: 0;
     }
   }
 
@@ -119,7 +105,46 @@
     .title,
     .tail,
     .marquee-with-author {
-      padding: 0 $padding;
+      padding: calc($padding/2) $padding;
     }
   }
+}
+
+// TABLET VERSION
+@include mixins.for-tablet {
+  .news-article {
+    $max-article-width: 234px;
+
+    max-width: $max-article-width;
+
+    .title,
+    .tail,
+    .marquee-with-author {
+      padding: 0;
+    }
+    .title {
+      $font-size-tablet: 18px;
+      $line-height-tablet: 26px;
+
+      font-size: $font-size-tablet;
+      line-height: $line-height-tablet;
+    }
+    .image {
+      $height: 156px;
+
+      height: $height;
+    }
+    &.author-scoped {
+      $width: 234px;
+
+      margin: 0;
+      padding: 0;
+
+      width: $width;
+      margin: 0;
+    }
+  }
+}
+
+@include mixins.for-desktop {
 }
