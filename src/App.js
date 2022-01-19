@@ -1,5 +1,5 @@
 import "./App.scss";
-import { articles } from "./api/articles";
+import articles from "./api/articles";
 import { Container } from "./components";
 
 const App = () => {

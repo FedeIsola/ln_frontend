@@ -1,4 +1,4 @@
-export const articles = [
+const articles = [
   {
     title: "Novedades",
     clickable: true,
@@ -147,3 +147,5 @@ export const articles = [
     ],
   },
 ];
+
+export default articles;

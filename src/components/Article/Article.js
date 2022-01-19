@@ -1,5 +1,5 @@
 import "./Article.scss";
-import { handleLayout } from "./Layouts/Layouts";
+import handleLayout from "./LayoutsHandler/LayoutsHandler";
 
 const Article = (props) => {
   const { data, type } = props;
