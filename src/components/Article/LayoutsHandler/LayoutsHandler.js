@@ -1,17 +1,30 @@
-import ComponentsHandler from "../ComponentsHandler/ComponentsHandler";
-import Layout from "./Layout";
+import { ComponentsHandler } from "../ComponentsHandler/ComponentsHandler";
 
-const handleLayout = (data, type) => {
+export const LayoutsHandler = (data) => {
   const { Image, LeadWithTitle, Tail, AuthorImage, MarqueeWithAuthor } = ComponentsHandler(data);
 
-  switch (type) {
-    case "author-scoped":
-      return <Layout elements={[<LeadWithTitle />, <AuthorImage />, <MarqueeWithAuthor />]} />;
-    case "color-scoped":
-      return <Layout elements={[<Image />, <LeadWithTitle />, <MarqueeWithAuthor />]} />;
-    default:
-      return <Layout elements={[<Image />, <LeadWithTitle />, <Tail />, <MarqueeWithAuthor />]} />;
-  }
+  return {
+    AuthorScoped: () => (
+      <>
+        <LeadWithTitle />
+        <AuthorImage />
+        <MarqueeWithAuthor />
+      </>
+    ),
+    ColorScoped: () => (
+      <>
+        <Image />
+        <LeadWithTitle />
+        <MarqueeWithAuthor />
+      </>
+    ),
+    Default: () => (
+      <>
+        <Image />
+        <LeadWithTitle />
+        <Tail />
+        <MarqueeWithAuthor />
+      </>
+    ),
+  };
 };
-
-export default handleLayout;
