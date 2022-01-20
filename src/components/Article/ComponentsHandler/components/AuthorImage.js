@@ -1,9 +1,5 @@
 export const AuthorImage = (props) => {
-  const { authorName, authorImage, url } = props;
+  const { authorName, authorImage } = props;
 
-  return authorImage ? (
-    <a href={url}>
-      <img className="author-image" src={authorImage} alt={authorName} />
-    </a>
-  ) : null;
+  return authorImage ? <img className="author-image" src={authorImage} alt={authorName} /> : null;
 };

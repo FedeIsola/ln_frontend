@@ -1,9 +1,5 @@
 export const Tail = (props) => {
-  const { tail, url } = props;
+  const { tail } = props;
 
-  return tail ? (
-    <a href={url}>
-      <p className="tail">{tail}</p>
-    </a>
-  ) : null;
+  return tail ? <p className="tail">{tail}</p> : null;
 };

@@ -1,9 +1,5 @@
 export const Image = (props) => {
-  const { image, url, title } = props;
+  const { image, title } = props;
 
-  return image ? (
-    <a href={url}>
-      <img className="image" src={image} alt={title} />
-    </a>
-  ) : null;
+  return image ? <img className="image" src={image} alt={title} /> : null;
 };
