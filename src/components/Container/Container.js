@@ -1,12 +1,12 @@
 import "./Container.scss";
-import Article from "../Article/Article";
+import { Layout } from "./LayoutsHandler/Layout";
 
-const Container = (props) => (
-  <section className={`container ${props.type ? props.type : null}`}>
-    {props.articles.map((article, index) => (
-      <Article className={`article-${index}`} data={article} type={article.type} key={index} />
-    ))}
-  </section>
-);
+export const Container = (props) => {
+  const { type, articles, title } = props;
 
-export default Container;
+  return (
+    <section className={`container ${type ? type : null}`}>
+      <Layout articles={articles} type={type} title={title} />
+    </section>
+  );
+};
