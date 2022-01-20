@@ -90,7 +90,7 @@ export const articles = [
     ],
   },
   {
-    type: "notas-3",
+    type: "focal-izquierdo",
     articles: [
       {
         lead: "Ni la costa ni el Sur",
