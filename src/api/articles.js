@@ -33,7 +33,7 @@ export const articles = [
     ],
   },
   {
-    type: "notas-3",
+    type: "notas-2",
     articles: [
       {
         lead: "Coronavirus",
@@ -50,6 +50,40 @@ export const articles = [
         authorName: "Angie Anglesio",
         url: "https://www.lanacion.com.ar/economia/punta-mogotes-vuelve-el-hijo-del-pato-de-mar-del-plata-el-icono-detras-de-un-negocio-de-52-anos-nid17012022/",
       },
+    ],
+  },
+  {
+    type: "notas-3",
+    articles: [
+      {
+        title: "Bien común e interés publico, fines del Estado",
+        authorName: "Juan Carlos Cassagne",
+        authorImage:
+          "https://resizer.glanacion.com/resizer/x4iwhDNPRHX2l88RARa9_GSgU6A=/80x0/filters:quality(80)/s3.amazonaws.com/arc-authors/lanacionar/2865294.png",
+        url: "https://www.lanacion.com.ar/opinion/bien-comun-e-interes-publico-fines-del-estado-nid17012022/",
+        type: "author-scoped",
+      },
+      {
+        lead: "Super alta definición",
+        title: "Netflix en calidad 4K: cómo acceder a una imagen de cine en tu casa",
+        image:
+          "https://resizer.glanacion.com/resizer/poErdqh0dAdirjVsohKnxnXUC98=/233x159/smart/filters:quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/GDM57HS7I5D3HMXEDNHAT53DT4.jpg",
+        url: "https://www.lanacion.com.ar/lifestyle/netflix-en-calidad-4k-uhd-como-acceder-a-una-imagen-como-del-cine-pero-en-tu-casa-nid17012022/",
+      },
+      {
+        lead: "Previsión",
+        title: "La F.1 tomó nota del caso Djokovic e impuso su propia regla para evitar sorpresas",
+        marquee: "Esto es una mezcla entre anuncio y noticia",
+        image:
+          "https://resizer.glanacion.com/resizer/0xKwLVupHrlnDspDwvuksEh-OPs=/231x154/smart/filters:quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/HMH4V7PGCVEZTFW4FIOWCZEP3U.JPG",
+        url: "https://www.lanacion.com.ar/deportes/la-formula-1-obligara-a-todos-sus-pilotos-a-estar-vacunados-esta-temporada-nid17012022/",
+        type: "color-scoped",
+      },
+    ],
+  },
+  {
+    type: "notas-2",
+    articles: [
       {
         lead: "Desde $1800",
         title: "Cómo invertir, a partir de mañana, en los principales índices de Estados Unidos desde la Argentina",
@@ -58,11 +92,6 @@ export const articles = [
         authorName: "Melisa Reinhold",
         url: "https://www.lanacion.com.ar/economia/nueva-normativa-como-invertir-desde-la-argentina-por-menos-de-2000-en-las-principales-empresas-de-nid17012022/",
       },
-    ],
-  },
-  {
-    type: "notas-3",
-    articles: [
       {
         title: "Facturas baratitas, pero todos al spiedo",
         authorName: "Pablo Sirvén",
@@ -70,22 +99,6 @@ export const articles = [
           "https://resizer.glanacion.com/resizer/Os-TLy48VlJJ7ptRvoq3I7lbcRg=/80x0/filters:quality(80)/s3.amazonaws.com/arc-authors/lanacionar/2735400.png",
         url: "https://www.lanacion.com.ar/opinion/facturas-baratitas-pero-todos-al-spiedo-nid16012022/",
         type: "author-scoped",
-      },
-      {
-        lead: "En fotos",
-        title: "Esta casa no tiene Internet, se arma en 90 minutos y se conecta con el celular",
-        image:
-          "https://resizer.glanacion.com/resizer/AQvLqGYLhPERoU6BIRUNJWXD2oc=/320x213/smart/filters:quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/AVSH3ZEVOBAM3FSQW6QG4NFJ5M.jpg",
-        authorName: "Lucila Barreiro",
-        url: "https://www.lanacion.com.ar/propiedades/construccion-y-diseno/esta-casa-no-tiene-internet-se-arma-en-90-minutos-y-se-conecta-con-el-celular-nid13012022/",
-      },
-      {
-        lead: "Con un avión militar",
-        title: "La fuerza Aérea operará vuelos de Flybondi ante falta de pilotos por el avance de Ómicron",
-        image:
-          "https://resizer.glanacion.com/resizer/ee8HkIWerblA5-qkF9KUQ8lj_DQ=/320x213/smart/filters:quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/ZNWLCSZIHVFAHAYNTUPHKR55FI.JPG",
-        authorName: "Mariano De Vedia",
-        url: "https://www.lanacion.com.ar/politica/la-fuerza-aerea-operara-vuelos-de-flybondi-por-falta-de-pilotos-ante-el-avance-de-casos-de-covid-19-nid17012022/",
       },
     ],
   },
@@ -118,31 +131,23 @@ export const articles = [
     ],
   },
   {
-    type: "notas-3",
+    type: "notas-2",
     articles: [
       {
-        title: "Bien común e interés publico, fines del Estado",
-        authorName: "Juan Carlos Cassagne",
-        authorImage:
-          "https://resizer.glanacion.com/resizer/x4iwhDNPRHX2l88RARa9_GSgU6A=/80x0/filters:quality(80)/s3.amazonaws.com/arc-authors/lanacionar/2865294.png",
-        url: "https://www.lanacion.com.ar/opinion/bien-comun-e-interes-publico-fines-del-estado-nid17012022/",
-        type: "author-scoped",
+        lead: "En fotos",
+        title: "Esta casa no tiene Internet, se arma en 90 minutos y se conecta con el celular",
+        image:
+          "https://resizer.glanacion.com/resizer/AQvLqGYLhPERoU6BIRUNJWXD2oc=/320x213/smart/filters:quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/AVSH3ZEVOBAM3FSQW6QG4NFJ5M.jpg",
+        authorName: "Lucila Barreiro",
+        url: "https://www.lanacion.com.ar/propiedades/construccion-y-diseno/esta-casa-no-tiene-internet-se-arma-en-90-minutos-y-se-conecta-con-el-celular-nid13012022/",
       },
       {
-        lead: "Super alta definición",
-        title: "Netflix en calidad 4K: cómo acceder a una imagen de cine en tu casa",
+        lead: "Con un avión militar",
+        title: "La fuerza Aérea operará vuelos de Flybondi ante falta de pilotos por el avance de Ómicron",
         image:
-          "https://resizer.glanacion.com/resizer/poErdqh0dAdirjVsohKnxnXUC98=/233x159/smart/filters:quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/GDM57HS7I5D3HMXEDNHAT53DT4.jpg",
-        url: "https://www.lanacion.com.ar/lifestyle/netflix-en-calidad-4k-uhd-como-acceder-a-una-imagen-como-del-cine-pero-en-tu-casa-nid17012022/",
-      },
-      {
-        lead: "Previsión",
-        title: "La F.1 tomó nota del caso Djokovic e impuso su propia regla para evitar sorpresas",
-        marquee: "Test",
-        image:
-          "https://resizer.glanacion.com/resizer/0xKwLVupHrlnDspDwvuksEh-OPs=/231x154/smart/filters:quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/HMH4V7PGCVEZTFW4FIOWCZEP3U.JPG",
-        url: "https://www.lanacion.com.ar/deportes/la-formula-1-obligara-a-todos-sus-pilotos-a-estar-vacunados-esta-temporada-nid17012022/",
-        type: "color-scoped",
+          "https://resizer.glanacion.com/resizer/ee8HkIWerblA5-qkF9KUQ8lj_DQ=/320x213/smart/filters:quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/ZNWLCSZIHVFAHAYNTUPHKR55FI.JPG",
+        authorName: "Mariano De Vedia",
+        url: "https://www.lanacion.com.ar/politica/la-fuerza-aerea-operara-vuelos-de-flybondi-por-falta-de-pilotos-ante-el-avance-de-casos-de-covid-19-nid17012022/",
       },
     ],
   },
