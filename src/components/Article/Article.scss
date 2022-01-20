@@ -144,8 +144,20 @@
       width: $width;
       margin: 0;
     }
+    &.color-scoped {
+      $background-color: #c61c1e;
+
+      background-color: $background-color;
+    }
   }
 }
 
 @include mixins.for-desktop {
+  .news-article {
+    &.color-scoped {
+      $background-color: #c40f4d;
+
+      background-color: $background-color;
+    }
+  }
 }
