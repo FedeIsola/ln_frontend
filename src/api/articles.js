@@ -1,8 +1,8 @@
-const articles = [
+export const articles = [
   {
     title: "Novedades",
     clickable: true,
-    type: "notas-3",
+    type: "focal-izquierdo",
     url: "https://www.lanacion.com.ar/novedades",
     articles: [
       {
@@ -147,5 +147,3 @@ const articles = [
     ],
   },
 ];
-
-export default articles;

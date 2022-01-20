@@ -1,10 +1,12 @@
-const LeadWithTitle = (props) => (
-  <a href={props.url}>
-    <h2 className="title">
-      {props.lead ? <span className="lead">{props.lead}. </span> : null}
-      {props.title}
-    </h2>
-  </a>
-);
+export const LeadWithTitle = (props) => {
+  const { title, lead, url } = props;
 
-export default LeadWithTitle;
+  return (
+    <a href={url}>
+      <h2 className="title">
+        {lead ? <span className="lead">{lead}. </span> : null}
+        {title}
+      </h2>
+    </a>
+  );
+};

@@ -1,10 +1,12 @@
 import "./Article.scss";
-import handleLayout from "./LayoutsHandler/LayoutsHandler";
+import { Layout } from "./LayoutsHandler/Layout";
 
-const Article = (props) => {
+export const Article = (props) => {
   const { data, type } = props;
 
-  return <article className={`news-article${type ? ` ${type}` : ""}`}>{handleLayout(data, type)}</article>;
+  return (
+    <article className={`news-article${type ? ` ${type}` : ""}`}>
+      <Layout data={data} type={type} />
+    </article>
+  );
 };
-
-export default Article;

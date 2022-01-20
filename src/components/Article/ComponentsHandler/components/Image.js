@@ -1,8 +1,9 @@
-const Image = (props) =>
-  props.image ? (
-    <a href={props.url}>
-      <img className="image" src={props.image} alt={props.title} />
+export const Image = (props) => {
+  const { image, url, title } = props;
+
+  return image ? (
+    <a href={url}>
+      <img className="image" src={image} alt={title} />
     </a>
   ) : null;
-
-export default Image;
+};

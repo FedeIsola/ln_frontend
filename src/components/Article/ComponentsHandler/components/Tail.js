@@ -1,8 +1,9 @@
-const Tail = (props) =>
-  props.tail ? (
-    <a href={props.url}>
-      <p className="tail">{props.tail}</p>
+export const Tail = (props) => {
+  const { tail, url } = props;
+
+  return tail ? (
+    <a href={url}>
+      <p className="tail">{tail}</p>
     </a>
   ) : null;
-
-export default Tail;
+};
