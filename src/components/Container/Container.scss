@@ -2,24 +2,62 @@
 
 .container {
   $gap-between-articles: 32px;
-  $max-width: 920px;
+  $max-width: 736px;
 
   display: flex;
   flex-direction: column;
   gap: $gap-between-articles;
-  margin: auto;
   max-width: $max-width;
 }
 
 @include mixins.for-tablet {
   .container {
+    $gap-between-articles: 32px;
+    $gap: 16px;
     &.notas-3 {
       flex-direction: row;
-      gap: 16px;
+      gap: $gap;
     }
     &.focal-izquierdo {
+      $foco-izquierdo-width: 470px;
+      $foco-derecho-width: 234px;
+      $line-color: #cccccc;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: $foco-izquierdo-width $foco-derecho-width + $gap;
+      gap: $gap;
+      border-bottom: 1px solid $line-color;
+      padding-bottom: $gap-between-articles;
+      .foco-izquierdo {
+        .news-article {
+          display: flex;
+          flex-direction: column;
+          width: $foco-izquierdo-width;
+          .image {
+            $height: 313px;
+
+            height: $height;
+            order: 1;
+          }
+          .title {
+            $font-size: 32px;
+            $line-height: 40px;
+
+            font-size: $font-size;
+            line-height: $line-height;
+            font-weight: bold;
+          }
+        }
+      }
+      .foco-derecho {
+        padding-left: $gap;
+        border-left: 1px solid #cccccc;
+        display: flex;
+        flex-direction: column;
+        gap: $gap;
+        .news-article {
+          width: $foco-derecho-width;
+        }
+      }
     }
   }
 }
