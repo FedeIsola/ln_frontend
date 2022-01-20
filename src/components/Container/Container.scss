@@ -14,6 +14,16 @@
   .container {
     $gap-between-articles: 32px;
     $gap: 16px;
+    &.notas-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .news-article {
+        width: 360px;
+        .image {
+          height: 240px;
+        }
+      }
+    }
     &.notas-3 {
       flex-direction: row;
       gap: $gap;

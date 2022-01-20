@@ -4,6 +4,12 @@ export const LayoutsHandler = (title, articles) => {
   const [article1, article2, article3] = articles;
 
   return {
+    Notas2: () => (
+      <>
+        <Article data={article1} type={article1.type} />
+        <Article data={article2} type={article2.type} />
+      </>
+    ),
     Notas3: () => (
       <>
         <Article data={article1} type={article1.type} />
