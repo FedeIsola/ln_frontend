@@ -12,7 +12,7 @@
 }
 
 .news-article {
-  $article-width: 320px;
+  $article-width: 100%;
   $gap-between-elements: 8px;
   $article-padding: 22px;
 
@@ -27,7 +27,7 @@
   .image {
     $heigth: 192px;
     width: 100%;
-    height: $heigth;
+    min-height: $heigth;
   }
   .title {
     $font-size: 18px;
@@ -66,7 +66,7 @@
     $margin: 16px;
     $vertical-padding: 18px;
     $horizontal-padding: 12px;
-    $width: $article-width - 2 * $margin;
+    $width: calc($article-width - 2 * $margin);
 
     aspect-ratio: 1/1;
     align-items: center;
