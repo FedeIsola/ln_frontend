@@ -12,22 +12,22 @@
 }
 
 .news-article {
-  $max-article-width: 320px;
+  $article-width: 320px;
   $gap-between-elements: 8px;
   $article-padding: 22px;
 
   display: flex;
   flex-direction: column;
   gap: $gap-between-elements;
-  max-width: $max-article-width;
+  width: $article-width;
   a {
     text-decoration: none;
     color: inherit;
   }
   .image {
-    $max-heigth: 192px;
+    $heigth: 192px;
     width: 100%;
-    max-height: $max-heigth;
+    height: $heigth;
   }
   .title {
     $font-size: 18px;
@@ -66,11 +66,12 @@
     $margin: 16px;
     $vertical-padding: 18px;
     $horizontal-padding: 12px;
-    $max-width: $max-article-width - 2 * $margin;
+    $width: $article-width - 2 * $margin;
 
+    aspect-ratio: 1/1;
     align-items: center;
     justify-content: center;
-    max-width: $max-width;
+    width: $width;
     margin: 0 $margin;
     padding: $vertical-padding $horizontal-padding;
     border: 1px solid $border-color;
@@ -85,7 +86,7 @@
     }
     .author-image {
       border-radius: 50%;
-      max-width: 80px;
+      width: 80px;
     }
     .marquee-with-author {
       padding-left: 0;
@@ -113,9 +114,9 @@
 // TABLET VERSION
 @include mixins.for-tablet {
   .news-article {
-    $max-article-width: 234px;
+    $article-width: 234px;
 
-    max-width: $max-article-width;
+    width: $article-width;
 
     .title,
     .tail,
