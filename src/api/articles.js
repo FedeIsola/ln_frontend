@@ -73,10 +73,10 @@ export const articles = [
       {
         lead: "Previsión",
         title: "La F.1 tomó nota del caso Djokovic e impuso su propia regla para evitar sorpresas",
-        marquee: "Esto es una mezcla entre anuncio y noticia",
         image:
           "https://resizer.glanacion.com/resizer/0xKwLVupHrlnDspDwvuksEh-OPs=/231x154/smart/filters:quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/HMH4V7PGCVEZTFW4FIOWCZEP3U.JPG",
         url: "https://www.lanacion.com.ar/deportes/la-formula-1-obligara-a-todos-sus-pilotos-a-estar-vacunados-esta-temporada-nid17012022/",
+        marquee: "Nota color",
         type: "color-scoped",
       },
     ],
