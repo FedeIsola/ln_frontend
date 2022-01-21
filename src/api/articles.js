@@ -104,6 +104,7 @@ export const articles = [
   },
   {
     type: "focal-izquierdo",
+    title: "El verano",
     articles: [
       {
         lead: "Ni la costa ni el Sur",
