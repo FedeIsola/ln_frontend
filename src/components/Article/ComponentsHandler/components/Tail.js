@@ -1,5 +1,3 @@
-export const Tail = (props) => {
-  const { tail } = props;
-
+export const Tail = ({ tail }) => {
   return tail ? <p className="tail">{tail}</p> : null;
 };

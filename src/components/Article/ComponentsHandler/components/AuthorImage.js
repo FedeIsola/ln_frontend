@@ -1,5 +1,3 @@
-export const AuthorImage = (props) => {
-  const { authorName, authorImage } = props;
-
+export const AuthorImage = ({ authorName, authorImage }) => {
   return authorImage ? <img className="author-image" src={authorImage} alt={authorName} /> : null;
 };

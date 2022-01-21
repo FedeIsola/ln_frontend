@@ -1,7 +1,6 @@
 import { LayoutsHandler } from "components/Container/LayoutsHandler/LayoutsHandler";
 
-export const Layout = (props) => {
-  const { articles, type } = props;
+export const Layout = ({ articles, type }) => {
   const { Notas2, Notas3, Focal } = LayoutsHandler(articles);
 
   switch (type) {

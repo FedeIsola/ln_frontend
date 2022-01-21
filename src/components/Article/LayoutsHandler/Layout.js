@@ -1,7 +1,6 @@
 import { LayoutsHandler } from "./LayoutsHandler";
 
-export const Layout = (props) => {
-  const { type, data } = props;
+export const Layout = ({ type, data }) => {
   const { AuthorScoped, ColorScoped, Default } = LayoutsHandler(data);
 
   switch (type) {

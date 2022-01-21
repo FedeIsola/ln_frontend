@@ -1,9 +1,7 @@
 import "./Container.scss";
 import { Layout } from "./LayoutsHandler/Layout";
 
-export const Container = (props) => {
-  const { type, articles, title } = props;
-
+export const Container = ({ type, articles, title }) => {
   return (
     <section className="container">
       {title ? <h2 className="container-title">{title}</h2> : null}
