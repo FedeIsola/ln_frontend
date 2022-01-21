@@ -119,7 +119,7 @@ export const articles = [
         image:
           "https://resizer.glanacion.com/resizer/tPg0kCW4Icp7F5vWVSAGisfj5wI=/233x159/filters:quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/DBU4AXZROJH65JX6P2I7VSPD4Y.jpg",
         url: "https://www.lanacion.com.ar/lifestyle/el-video-que-muestra-que-toda-la-vida-usamos-mal-las-almohadas-para-viajar-nid17012022/",
-        marquee: "Esto es un marquee de test",
+        marquee: "Videos virales",
       },
       {
         lead: "Alguien denunció",
