@@ -20,6 +20,16 @@
   flex-direction: column;
   width: $article-width;
   gap: $gap-between-elements;
+  .article-link {
+    $animation-time: 0.2s;
+
+    text-decoration: none;
+    color: inherit;
+    transition: $animation-time ease;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
   .image {
     $heigth: 192px;
 
