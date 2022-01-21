@@ -1,0 +1,16 @@
+&.color-scoped {
+  $background-color: variables.$highlight-color;
+  $font-color: white;
+  $padding: 16px;
+
+  background-color: $background-color;
+  color: $font-color;
+  .lead {
+    color: $font-color;
+  }
+  .title,
+  .tail,
+  .marquee-with-author {
+    padding: calc($padding/2) $padding;
+  }
+}

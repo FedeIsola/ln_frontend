@@ -32,10 +32,9 @@
   .title {
     $font-size: 18px;
     $line-height: 26px;
-    $font: "Sueca Slab";
 
     font-weight: normal;
-    font-family: $font;
+    font-family: variables.$title-font;
     padding: 0 $article-padding;
     font-size: $font-size;
     line-height: $line-height;
@@ -61,103 +60,11 @@
     padding-left: $article-padding;
   }
 
-  &.author-scoped {
-    $border-color: #cccccc;
-    $margin: 16px;
-    $vertical-padding: 18px;
-    $horizontal-padding: 12px;
-    $width: calc($article-width - 2 * $margin);
+  @import "./styles/AuthorScoped";
 
-    aspect-ratio: 1/1;
-    align-items: center;
-    justify-content: center;
-    width: $width;
-    margin: 0 $margin;
-    padding: $vertical-padding $horizontal-padding;
-    border: 1px solid $border-color;
-    text-align: center;
-
-    .title {
-      $font-size: 18px;
-      $line-height: 28px;
-
-      font-size: $font-size;
-      line-height: $line-height;
-    }
-    .author-image {
-      border-radius: 50%;
-      width: 80px;
-    }
-    .marquee-with-author {
-      padding-left: 0;
-    }
-  }
-
-  &.color-scoped {
-    $background-color: #0074c4;
-    $font-color: white;
-    $padding: 16px;
-
-    background-color: $background-color;
-    color: $font-color;
-    .lead {
-      color: $font-color;
-    }
-    .title,
-    .tail,
-    .marquee-with-author {
-      padding: calc($padding/2) $padding;
-    }
-  }
+  @import "./styles/ColorScoped";
 }
 
-// TABLET VERSION
-@include mixins.for-tablet {
-  .news-article {
-    $article-width: 234px;
+@import "./styles/Tablet";
 
-    width: $article-width;
-
-    .title,
-    .tail,
-    .marquee-with-author {
-      padding: 0;
-    }
-    .title {
-      $font-size-tablet: 18px;
-      $line-height-tablet: 26px;
-
-      font-size: $font-size-tablet;
-      line-height: $line-height-tablet;
-    }
-    .image {
-      $height: 156px;
-
-      height: $height;
-    }
-    &.author-scoped {
-      $width: 234px;
-
-      margin: 0;
-      padding: 0;
-
-      width: $width;
-      margin: 0;
-    }
-    &.color-scoped {
-      $background-color: #c61c1e;
-
-      background-color: $background-color;
-    }
-  }
-}
-
-@include mixins.for-desktop {
-  .news-article {
-    &.color-scoped {
-      $background-color: #c40f4d;
-
-      background-color: $background-color;
-    }
-  }
-}
+@import "./styles/Desktop";

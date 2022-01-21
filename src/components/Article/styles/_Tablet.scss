@@ -1,0 +1,29 @@
+@use "../../../abstracts/mixins" as mixins;
+
+@include mixins.for-tablet {
+  .news-article {
+    $article-width: 234px;
+
+    width: $article-width;
+
+    .title,
+    .tail,
+    .marquee-with-author {
+      padding: 0;
+    }
+    .title {
+      $font-size-tablet: 18px;
+      $line-height-tablet: 26px;
+
+      font-size: $font-size-tablet;
+      line-height: $line-height-tablet;
+    }
+    .image {
+      $height: 156px;
+
+      height: $height;
+    }
+    @import "./Tablet/AuthorScoped";
+    @import "./Tablet/ColorScoped";
+  }
+}

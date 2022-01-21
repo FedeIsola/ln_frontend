@@ -1,7 +1,9 @@
 @use "../../abstracts/mixins" as mixins;
+@use "../../abstracts/variables" as variables;
 
-.container {
-  $gap-between-articles: 32px;
+$gap-between-articles: 32px;
+
+.inner-container {
   $max-width: 736px;
 
   display: flex;
@@ -10,64 +12,21 @@
   max-width: $max-width;
 }
 
-@include mixins.for-tablet {
-  .container {
-    $gap-between-articles: 32px;
-    $gap: 16px;
-    &.notas-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      .news-article {
-        width: 360px;
-        .image {
-          height: 240px;
-        }
-      }
-    }
-    &.notas-3 {
-      flex-direction: row;
-      gap: $gap;
-    }
-    &.focal-izquierdo {
-      $foco-izquierdo-width: 470px;
-      $foco-derecho-width: 234px;
-      $line-color: #cccccc;
-      display: grid;
-      grid-template-columns: $foco-izquierdo-width $foco-derecho-width + $gap;
-      gap: $gap;
-      border-bottom: 1px solid $line-color;
-      padding-bottom: $gap-between-articles;
-      .foco-izquierdo {
-        .news-article {
-          display: flex;
-          flex-direction: column;
-          width: $foco-izquierdo-width;
-          .image {
-            $height: 313px;
+.container-title {
+  $font-size: 24px;
+  $line-height: 32px;
+  $border-color: variables.$border-color;
 
-            height: $height;
-            order: 1;
-          }
-          .title {
-            $font-size: 32px;
-            $line-height: 40px;
-
-            font-size: $font-size;
-            line-height: $line-height;
-            font-weight: bold;
-          }
-        }
-      }
-      .foco-derecho {
-        padding-left: $gap;
-        border-left: 1px solid #cccccc;
-        display: flex;
-        flex-direction: column;
-        gap: $gap;
-        .news-article {
-          width: $foco-derecho-width;
-        }
-      }
-    }
-  }
+  margin: 16px;
+  padding-bottom: 8px;
+  font-family: variables.$title-font;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: bold;
+  border-bottom: 1px solid $border-color;
+  margin-bottom: 16px;
 }
+
+@import "./styles/Tablet";
+
+@import "./styles/Desktop";

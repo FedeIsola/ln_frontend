@@ -1,0 +1,11 @@
+@use "../../../abstracts/mixins" as mixins;
+
+@include mixins.for-desktop {
+  .news-article {
+    &.color-scoped {
+      $background-color: #c40f4d;
+
+      background-color: $background-color;
+    }
+  }
+}

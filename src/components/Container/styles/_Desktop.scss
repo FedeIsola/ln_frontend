@@ -1,0 +1,18 @@
+@include mixins.for-desktop {
+  $gap: 40px;
+  $margin-right: 300px;
+  .container {
+    margin-right: $margin-right + $gap;
+  }
+  .inner-container {
+    $max-width: 920px;
+
+    max-width: $max-width;
+
+    @import "./Desktop/Notas2";
+
+    @import "./Desktop/Notas3";
+
+    @import "./Desktop/FocalIzquierdo";
+  }
+}

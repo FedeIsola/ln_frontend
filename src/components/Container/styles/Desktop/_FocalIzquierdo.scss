@@ -1,0 +1,22 @@
+&.focal-izquierdo {
+  $foco-izquierdo-width: 560px;
+  $foco-derecho-width: 280px + $gap;
+
+  gap: $gap;
+  grid-template-columns: $foco-izquierdo-width $foco-derecho-width;
+
+  .news-article {
+    min-width: 100%;
+  }
+  .foco-izquierdo {
+    .image {
+      $height: 373px;
+
+      min-height: $height;
+    }
+  }
+  .foco-derecho {
+    padding-left: $gap;
+    width: 100%;
+  }
+}

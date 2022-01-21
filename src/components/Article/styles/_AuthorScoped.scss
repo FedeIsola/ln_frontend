@@ -1,0 +1,33 @@
+&.author-scoped {
+  $border-color: variables.$border-color;
+  $margin: 16px;
+  $vertical-padding: 18px;
+  $horizontal-padding: 12px;
+  $width: calc($article-width - 2 * $margin);
+
+  aspect-ratio: 1/1;
+  align-items: center;
+  justify-content: center;
+  width: $width;
+  margin: 0 $margin;
+  padding: $vertical-padding $horizontal-padding;
+  border: 1px solid $border-color;
+  text-align: center;
+
+  .title {
+    $font-size: 18px;
+    $line-height: 28px;
+
+    font-size: $font-size;
+    line-height: $line-height;
+  }
+  .author-image {
+    $width: 80px;
+
+    border-radius: 50%;
+    width: $width;
+  }
+  .marquee-with-author {
+    padding-left: 0;
+  }
+}

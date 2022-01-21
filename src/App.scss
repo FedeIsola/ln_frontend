@@ -11,10 +11,8 @@ html {
 body {
   $background-color: #fefefe;
   $font: "Arial";
-
   max-width: 100%;
-
-  font-family: $font;
+  font-family: variables.$body-font;
   background-color: $background-color;
 }
 

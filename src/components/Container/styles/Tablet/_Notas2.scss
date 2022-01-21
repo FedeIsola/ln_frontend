@@ -1,0 +1,12 @@
+&.notas-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .news-article {
+    $image-height: 240px;
+
+    width: 100%;
+    .image {
+      height: $image-height;
+    }
+  }
+}
