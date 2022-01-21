@@ -1,7 +1,6 @@
 export const articles = [
   {
     title: "Novedades",
-    clickable: true,
     type: "focal-izquierdo",
     url: "https://www.lanacion.com.ar/novedades",
     articles: [
