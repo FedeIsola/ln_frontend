@@ -3,6 +3,11 @@
 
 $gap-between-articles: 32px;
 
+.container-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .inner-container {
   $max-width: 736px;
 
