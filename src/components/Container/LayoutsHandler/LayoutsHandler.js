@@ -1,6 +1,6 @@
 import { Article } from "../../Article/Article";
 
-export const LayoutsHandler = (title, articles) => {
+export const LayoutsHandler = (articles) => {
   const [article1, article2, article3] = articles;
 
   return {
@@ -17,7 +17,7 @@ export const LayoutsHandler = (title, articles) => {
         <Article data={article3} type={article3.type} />
       </>
     ),
-    FocalIzquierdo: () => (
+    Focal: () => (
       <>
         <div className="foco-izquierdo">
           <Article data={article1} type={article1.type} />
