@@ -20,11 +20,8 @@
         order: 1;
       }
       .title {
-        $font-size: 32px;
-        $line-height: 40px;
-
-        font-size: $font-size;
-        line-height: $line-height;
+        font-size: variables.$font-size-title-extra-big;
+        line-height: variables.$line-height-title-extra-big;
         font-weight: bold;
       }
     }

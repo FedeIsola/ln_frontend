@@ -16,15 +16,16 @@ $gap-between-articles: 32px;
   $font-size: 24px;
   $line-height: 32px;
   $border-color: variables.$border-color;
+  $margin: 16px;
+  $bottom: 8px;
 
-  margin: 16px;
-  padding-bottom: 8px;
   font-family: variables.$title-font;
   font-size: $font-size;
-  line-height: $line-height;
   font-weight: bold;
+  line-height: $line-height;
+  margin: $margin;
+  padding-bottom: $bottom;
   border-bottom: 1px solid $border-color;
-  margin-bottom: 16px;
 }
 
 @import "./styles/Tablet";

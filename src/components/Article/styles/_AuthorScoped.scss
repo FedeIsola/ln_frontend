@@ -6,20 +6,17 @@
   $width: calc($article-width - 2 * $margin);
 
   aspect-ratio: 1/1;
+  text-align: center;
   align-items: center;
   justify-content: center;
   width: $width;
   margin: 0 $margin;
   padding: $vertical-padding $horizontal-padding;
   border: 1px solid $border-color;
-  text-align: center;
 
   .title {
-    $font-size: 18px;
-    $line-height: 28px;
-
-    font-size: $font-size;
-    line-height: $line-height;
+    font-size: variables.$font-size-title-big;
+    line-height: variables.$line-height-title-big;
   }
   .author-image {
     $width: 80px;

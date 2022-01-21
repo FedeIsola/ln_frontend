@@ -1,3 +1,4 @@
+@use "../../../abstracts/variables" as variables;
 @use "../../../abstracts/mixins" as mixins;
 
 @include mixins.for-tablet {
@@ -12,11 +13,8 @@
       padding: 0;
     }
     .title {
-      $font-size-tablet: 18px;
-      $line-height-tablet: 26px;
-
-      font-size: $font-size-tablet;
-      line-height: $line-height-tablet;
+      font-size: variables.$font-size-title-small;
+      line-height: variables.$line-height-title-small;
     }
     .image {
       $height: 156px;

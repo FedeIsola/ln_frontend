@@ -9,28 +9,20 @@ html {
 }
 
 body {
-  $background-color: #fefefe;
-  $font: "Arial";
-  max-width: 100%;
+  $background-color: variables.$background-color;
+
   font-family: variables.$body-font;
+  max-width: 100%;
   background-color: $background-color;
-}
-
-a {
-  text-decoration: none;
-}
-
-.highlighted-item {
-  color: variables.$highlight-color;
-  font-weight: bold;
 }
 
 .main-content {
   $gap-between-sections: 32px;
-  padding: $gap-between-sections 0;
+
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  padding: $gap-between-sections 0;
   gap: $gap-between-sections;
 }

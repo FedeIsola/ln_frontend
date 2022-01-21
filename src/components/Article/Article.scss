@@ -18,44 +18,35 @@
 
   display: flex;
   flex-direction: column;
-  gap: $gap-between-elements;
   width: $article-width;
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
+  gap: $gap-between-elements;
   .image {
     $heigth: 192px;
+
     width: 100%;
     min-height: $heigth;
   }
   .title {
-    $font-size: 18px;
-    $line-height: 26px;
-
-    font-weight: normal;
     font-family: variables.$title-font;
+    font-size: variables.$font-size-title-big;
+    font-weight: normal;
+    line-height: variables.$line-height-title-big;
     padding: 0 $article-padding;
-    font-size: $font-size;
-    line-height: $line-height;
   }
   .lead {
     color: variables.$highlight-color;
   }
   .tail {
-    $font-size: 16px;
-    $line-height: 24px;
-
+    font-size: variables.$font-size-body;
+    line-height: variables.$line-height-body;
     padding: 0 $article-padding;
-    font-size: $font-size;
-    line-height: $line-height;
   }
   .marquee-with-author {
     $font-size: 14px;
     $line-height: 16px;
 
-    font-weight: bold;
     font-size: $font-size;
+    font-weight: bold;
     line-height: $line-height;
     padding-left: $article-padding;
   }
